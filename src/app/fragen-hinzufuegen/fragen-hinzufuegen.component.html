@@ -1,0 +1,110 @@
+<div class="row">
+  <div class="col-sm-6" id="frageErstellenLinks">
+    <form>
+      <!-- Frage 1 -->
+      <h4>Fragen für Route {{ routenName }} erstellen</h4>
+      <div class="form-group">
+        <label for="exampleFormControlTextarea1">Frage 1</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+      </div>
+
+      <!-- Antworten -->
+      <p>Mit dem Button wählen Sie aus, welche der Antworten die richtige ist:</p>
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <div class="input-group-text">
+            <input type="radio" aria-label="Radio button for following text input" name="antwortmoeglichkeit1">
+          </div>
+        </div>
+        <input type="text" class="form-control" aria-label="Text input with radio button" placeholder="Antwortmöglichkeit 1"
+          required minlength="1">
+      </div>
+
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <div class="input-group-text">
+            <input type="radio" aria-label="Radio button for following text input" name="antwortmoeglichkeit1">
+          </div>
+        </div>
+        <input type="text" class="form-control" aria-label="Text input with radio button" placeholder="Antwortmöglichkeit 2"
+          required minlength="1">
+      </div>
+
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <div class="input-group-text">
+            <input type="radio" aria-label="Radio button for following text input" name="antwortmoeglichkeit1">
+          </div>
+        </div>
+        <input type="text" class="form-control" aria-label="Text input with radio button" placeholder="Antwortmöglichkeit 3"
+          required minlength="1">
+      </div>
+
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <div class="input-group-text">
+            <input type="radio" aria-label="Radio button for following text input" name="antwortmoeglichkeit1">
+          </div>
+        </div>
+        <input type="text" class="form-control" aria-label="Text input with radio button" placeholder="Antwortmöglichkeit 4"
+          required minlength="1">
+      </div>
+
+      <!-- Frage 2 -->
+      <small> .</small>
+      <div class="form-group">
+        <label for="exampleFormControlTextarea1">Frage 2</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+      </div>
+
+      <!-- Antworten -->
+      <p>Mit dem Button wählen Sie aus, welche der Antworten die richtige ist:</p>
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <div class="input-group-text">
+            <input type="radio" aria-label="Radio button for following text input" name="antwortmoeglichkeit2">
+          </div>
+        </div>
+        <input type="text" class="form-control" aria-label="Text input with radio button" placeholder="Antwortmöglichkeit 1"
+          required minlength="1">
+      </div>
+
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <div class="input-group-text">
+            <input type="radio" aria-label="Radio button for following text input" name="antwortmoeglichkeit2">
+          </div>
+        </div>
+        <input type="text" class="form-control" aria-label="Text input with radio button" placeholder="Antwortmöglichkeit 2"
+          required minlength="1">
+      </div>
+
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <div class="input-group-text">
+            <input type="radio" aria-label="Radio button for following text input" name="antwortmoeglichkeit2">
+          </div>
+        </div>
+        <input type="text" class="form-control" aria-label="Text input with radio button" placeholder="Antwortmöglichkeit 3"
+          required minlength="1">
+      </div>
+
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <div class="input-group-text">
+            <input type="radio" aria-label="Radio button for following text input" name="antwortmoeglichkeit2">
+          </div>
+        </div>
+        <input type="text" class="form-control" aria-label="Text input with radio button" placeholder="Antwortmöglichkeit 4"
+          required minlength="1">
+      </div>
+      <div class="margin-top">
+          <button type="submit" class="btn btn-primary" id="neueRouteErstellen" routerLink="/routen" (click)="finishAddingFrage()">Erstellen</button>
+          <button type="button" class="btn btn-secondary" id="neueRouteAbbrechen" routerLink="/createroute" (click)="finishWithCancel()">Abbrechen</button>
+        </div>
+    </form>
+  </div>
+  <div class="col-sm-6">
+    <div id="map" class="map"></div>
+  </div>
+</div>

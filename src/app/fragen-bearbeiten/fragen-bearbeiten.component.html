@@ -1,0 +1,26 @@
+<div id="fragen-bearbeiten" class="col-sm-6">
+  <form novalidate #form="ngForm">
+    <h2>{{ routenName }} bearbeiten</h2>
+    <!-- Frage -->
+    <div class="form-group">
+      <label for="exampleFormControlTextarea1">Frage 1</label>
+      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" [(ngModel)]="frage.fragentext"></textarea>
+    </div>
+    <!-- Antworten -->
+    <p>Mit dem Button wählen Sie aus, welche der Antworten die richtige ist:</p>
+    <div *ngFor="let antwort of antwortenZuFrage">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <div class="input-group-text">
+            <input type="radio" aria-label="Radio button for following text input" name="antwortmoeglichkeit1">
+          </div>
+        </div>
+        <input type="text" class="form-control" aria-label="Text input with radio button" placeholder="Antwortmöglichkeit 1"
+          required minlength="1" [(ngModel)]="antwort.antwortentext">
+      </div>
+    </div>
+
+
+
+  </form>
+</div>

@@ -1,0 +1,28 @@
+<h2> Wählen Sie eine Route aus:</h2>
+<div>
+        <button type="button" class="btn btn-success" routerLink="/createroute">neue Route anlegen</button>
+  </div>
+<div id="routenListe">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>aktiv</th>
+          <th scope="col">#</th>
+          <th scope="col">Name</th>
+          <th></th>
+          <th></th>
+         </tr>
+       </thead>
+       <tbody>
+        <tr *ngFor="let route of routen">
+          <td><input type="checkbox" aria-label="Checkbox for route"></td>
+          <td>{{route.id}}</td>
+          <td>{{route.name}}</td>
+          <td><button type="button" class="btn btn-outline-primary"  (click)="updateRoute(route)">bearbeiten</button></td>
+          <td><button type="button" class="btn btn-outline-danger" (click)="deleteRoute(route)" >löschen</button></td>
+        </tr>
+      </tbody>
+      </table>
+  </div>
+
+   <!-- routerLink="/updateroute"-->
